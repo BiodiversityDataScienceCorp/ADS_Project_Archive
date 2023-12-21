@@ -1,0 +1,94 @@
+---
+title: "hw4_wynbelt"
+author: "Bailie Wynbelt"
+date: "2023-02-14"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install Packages
+
+```{r packages}
+install.packages("spocc")
+install.packages("tidyverse") 
+library(spocc)
+library(tidyverse)
+```
+
+## Pulling data from gbif
+```{r gbif}
+snailquery <- occ(query = "Ashmunella levettei", 
+    from = "gbif", 
+    limit = 4000)
+
+```
+
+## Drill down to get the data 
+```{r gbif}
+snail <- snailquery$gbif$data$Ashmunella_levettei
+```
+
+## Deal with NAs
+```{r NAs}
+noNA <- snail %>% 
+  filter(latitude != "NA",
+         longitude != "NA")
+```
+
+## Remove duplicates
+```{r duplicates}
+noDupSn <- noNA %>% 
+  mutate(location = paste(latitude, 
+                          longitude,
+                          dateIdentified,
+                          sep = "/")) %>% 
+  distinct(location, .keep_all = TRUE)
+```
+
+## Finalize the clean data
+```{r final data}
+cleanSnail <- snail %>% 
+  filter(latitude != "NA", 
+         longitude !="NA") %>% 
+  mutate(location = paste(latitude, 
+                          longitude, 
+                          dateIdentified, 
+                          sep = "/")) %>% 
+  distinct(location, .keep_all = TRUE)
+```
+
+## Set X and Y limits 
+```{r x/y limits}
+xmax <- max(cleanSnail$longitude)
+xmin <- min(cleanSnail$longitude)
+ymax <- max(cleanSnail$latitude)
+ymin <- min(cleanSnail$latitude)
+
+```
+
+## Plot initial data
+```{r ggplot}
+wrld <- ggplot2::map_data("world")
+
+ggplot() +
+  geom_polygon(data = wrld,
+               mapping = aes(x = long, y = lat, group=group), 
+               fill = "grey75",
+               colour = "grey60")+
+  geom_point(data = cleanSnail, 
+             mapping = aes(x = longitude,
+                           y = latitude),
+             show.legend = FALSE)+
+  labs(title = "Species occurrences of Ashmunella levettei",
+       x = "longitude",
+       y = "latitude") +
+  coord_fixed(xlim = c(xmin, xmax), ylim=c(ymin, ymax)) +
+  scale_size_area() +
+  borders("state")
+```
+
+## What are occurrence points ?
+1. Occurrence points are locations where a species can be found/spotted..
