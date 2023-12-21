@@ -8,6 +8,12 @@ Archive of past group projects in Applied Data Science.
 
 - [Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of *Martes caurina*](2023/2023_Group_2-main/), by [Lilah Shapiro](https://github.com/LilahShapiro), [Sidra Wernli](https://github.com/orgs/BiodiversityDataScienceCorp/people/sjwernli), [Kayli Navas](https://github.com/kaylinavas), and Louis Greenfield.
 
+- [Repository for Making Species Occurrence and Distribution maps for the Huachuca Woodland Snail (*Ashmunella levettei*)](2023/2023_Group_3-main/), by [Zoe Evans](https://github.com/zoeevans24), [Josie Graydon](https://github.com/josiegraydon), [Hailey Park](https://github.com/haileypark2), and [Bailie Wynbelt](https://github.com/BailieWynbelt).
+
+- [*Rhyacotriton cascadae* Species Distribution Model](2023/2023_Group_4-main/) by [Sydney Case](https://github.com/sydneycase1216), [Finn Watson](https://github.com/FinnW0812), [Olivia Varga](https://github.com/OliviaVarga), and [Aubrey Weinstein](https://github.com/aubreyweinstein).
+
+- [Creating Species Occurrence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*](2023/2023_Group_5-main/), by [Lily McMullen](https://github.com/lilymcmullen), [Nick Oliver](https://github.com/n0liver21), [Olivia Spagnuolo](https://github.com/oliviaspag), and [Whitney Maxfield](https://github.com/WhitneyMaxfield).
+
 ## 2022
 
 - [Repository for Making Species Occurrence and Distribution maps for the Showy Milkweed (*Asclepias speciosa*)](2022/milkfli-mapping-main/) by [Maxine Cruz](https://github.com/mcx8), [Deanna Sunnergren](https://github.com/dsunnergren), and [Caelen Wilkie-Rogers](https://github.com/CaelanWR).
