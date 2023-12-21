@@ -6,6 +6,7 @@ Archive of past group projects in Applied Data Science.
 
 - [Repository for Making Species Occurrence and Distribution maps for the *Rana Boylii* - Foothill Yellow Legged Frog](2023/2023_Group_1-main/), by [Elizabeth EbadiRad](https://github.com/ElizabethEbadiRad), [Abby Wood](https://github.com/abigailcwood), [Molly Hennelly](https://github.com/mollyhennelly), and [Ahmed Abdalla Ahmed Esmail](https://github.com/AhmedEsOfficial).
 
+- [Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of *Martes caurina*](2023/2023_Group_2-main/), by [Lilah Shapiro](https://github.com/LilahShapiro), [Sidra Wernli](https://github.com/orgs/BiodiversityDataScienceCorp/people/sjwernli), [Kayli Navas](https://github.com/kaylinavas), and Louis Greenfield.
 
 ## 2022
 
